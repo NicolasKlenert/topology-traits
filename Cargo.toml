@@ -1,0 +1,21 @@
+[package]
+name = "topology-traits"
+version = "0.1.0"
+edition = "2018"
+authors = ["Nicolas Klenert <klenert.nicolas@gmail.com>"]
+exclude = [".gitignore", "CHANGELOG.md", "CONTRIBUTING.md"]
+description = "Topological traits for generic mathematics in Rust."
+license = "MIT OR Apache-2.0"
+documentation = "https://docs.rs/topology-traits"
+repository = "https://github.com/NicolasKlenert/topology-traits"
+readme = "README.md"
+keywords = ["mathematics", "topology", "metric", "merge"]
+categories = ["mathematics", "algorithms", "no-std"]
+
+[dependencies]
+num-traits = "0.2"
+
+[features]
+default = ["std"]
+std = ["num-traits/std"]
+libm = ["num-traits/libm"]
