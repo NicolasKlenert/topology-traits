@@ -23,7 +23,7 @@ For certain elements calculating the shortest path between two elements may be c
 
 This crate can be used without the standard library (`#![no_std]`) by disabling the default `std` feature. Use this in Cargo.toml:
 ```toml
-[dependencies.enterpolation]
+[dependencies.topology-traits]
 version = "0.1"
 default-features = false
 features = ["libm"]
@@ -33,7 +33,7 @@ features = ["libm"]
 
 If you have a requirement for elements in mind which describes a mathematical property which is not numerical in nature and which is not covered by this crate yet, please tell us about it and create a new issue.
 
-Furthermore all contributions are welcome, no matter how huge or tiny. 
+Furthermore all contributions are welcome, no matter how huge or tiny.
 
 ## License
 
