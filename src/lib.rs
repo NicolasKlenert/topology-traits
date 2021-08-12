@@ -1,3 +1,4 @@
+#![doc = include_str!("../README.md")]
 #![ cfg_attr( not(feature = "std"), no_std ) ]
 
 use core::ops::{Add,Mul};
@@ -61,7 +62,7 @@ pub trait Connected<P,T = f64> {
 /// - Merge -> Connected
 pub trait Topology
 {
-    /// The type of paths in this space. Usually [Self,Self].
+    /// The type of paths in this space. Usually \[Self,Self\].
     type Path;
     /// Function which returns the shortest path between `self` as start point and `to` as end point.
     ///

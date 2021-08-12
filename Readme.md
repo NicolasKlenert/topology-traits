@@ -3,14 +3,7 @@
 <!--- This should be the same as the short description in cargo.toml --->
 Topological traits for generic mathematics in Rust.
 
-This crate is supposed to be an extension to num-traits. That is, often one has to work with more then simple numbers, for example Points in 3D space. `topology-traits` aims to define traits describing element relationships in various mathematical spaces and properties of these spaces.
-
-## Table of Contents
-
-- [Usage](#usage)
-- [Crate Features](#crate-features)
-- [Contributing](#contributing)
-- [License](#license)
+This crate is supposed to be an extension to num-traits. That is, often one has to work with more than simple numbers, for example Points in 3D space. `topology-traits` aims to define traits describing element relationships in various mathematical spaces and properties of these spaces.
 
 ## Usage
 
@@ -40,14 +33,14 @@ features = ["libm"]
 
 If you have a requirement for elements in mind which describes a mathematical property which is not numerical in nature and which is not covered by this crate yet, please tell us about it and create a new issue.
 
-Furthermore all contributions are welcome, no matter how huge or tiny, so take a look at [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines, if you are interested.
+Furthermore all contributions are welcome, no matter how huge or tiny. 
 
 ## License
 
 Licensed under either of
 
-* Apache License, Version 2.0, ([LICENSE-APACHE](LICENSE-APACHE) or <http://www.apache.org/licenses/LICENSE-2.0>)
-* MIT license ([LICENSE-MIT](LICENSE-MIT) or <http://opensource.org/licenses/MIT>)
+* [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0)
+* [MIT license](http://opensource.org/licenses/MIT)
 
 at your option.
 
