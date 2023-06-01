@@ -1,15 +1,14 @@
 #![doc = include_str!("../README.md")]
-#![ cfg_attr( not(feature = "std"), no_std ) ]
+#![cfg_attr(not(feature = "std"), no_std)]
 
-use core::ops::{Add,Mul};
+use core::ops::{Add, Mul};
 use num_traits::real::Real;
 
 /// All elements in a quasi metric space should implement this trait.
 ///
 /// If the struct implementing this trait also implements `Topology`,
 /// the `distance(to)` method should be equivalent to `self.shortest_path(to).length()`.
-pub trait QuasiMetric<T = f64>
-{
+pub trait QuasiMetric<T = f64> {
     /// Returns the length of the shortest path between the two points.
     fn distance(self, to: Self) -> T;
 }
@@ -45,7 +44,7 @@ pub trait Merge<T = f64> {
 }
 
 /// Trait for structures containing two elements which can be merged together.
-pub trait Connected<P,T = f64> {
+pub trait Connected<P, T = f64> {
     /// Returns the merged point of the start point and end point inside `self` with weight `factor`.
     ///
     /// Contracting with a factor of `Zero` should return the start point.
@@ -60,8 +59,7 @@ pub trait Connected<P,T = f64> {
 /// other traits trivially.
 /// - Length -> QuasiMetric
 /// - Merge -> Connected
-pub trait Topology
-{
+pub trait Topology {
     /// The type of paths in this space. Usually \[Self,Self\].
     type Path;
     /// Function which returns the shortest path between `self` as start point and `to` as end point.
@@ -70,9 +68,9 @@ pub trait Topology
     fn shortest_path(self, to: Self) -> Self::Path;
 }
 
-impl<E,T> Merge<T> for E
+impl<E, T> Merge<T> for E
 where
-    E: Add<Output = E> + Mul<T,Output = E> + Copy,
+    E: Add<Output = E> + Mul<T, Output = E> + Copy,
     T: Real,
 {
     fn merge(self, other: Self, factor: T) -> E {
