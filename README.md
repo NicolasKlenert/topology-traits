@@ -1,6 +1,5 @@
 # Topology-traits
 
-<!--- This should be the same as the short description in cargo.toml --->
 Topological traits for generic mathematics in Rust.
 
 This crate is supposed to be an extension to num-traits. That is, often one has to work with more than simple numbers, for example Points in 3D space. `topology-traits` aims to define traits describing element relationships in various mathematical spaces and properties of these spaces.
@@ -17,7 +16,7 @@ At the moment this crate contains traits to describe the distance of two element
 - distance to be the length of the shortest path between the elements and
 - the points lying between the elements to be exactly the points on the shortest path.
 
-For certain elements calculating the shortest path between two elements may be costly, such the trait `Topology` allows to implement the calculation of the shortest path separately. Such algorithms are able to use this trait to gain performance if they need multiple properties between two elements.
+For certain elements, calculating the shortest path between two elements may be costly, such the trait `Topology` allows to implement the calculation of the shortest path separately. Such algorithms are able to use this trait to gain performance if they need multiple properties between two elements.
 
 ## Crate Features
 

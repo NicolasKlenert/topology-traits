@@ -1,0 +1,12 @@
+[package]
+name = "topology-traits-test-suite"
+version = "0.0.0"
+authors = ["Nicolas Klenert <klenert.nicolas@gmail.com>"]
+edition = "2018"
+publish = false
+
+[dependencies]
+topology-traits = { path = "../topology-traits" }
+
+[dev-dependencies]
+topology-traits-derive = { path = "../topology-traits-derive"}
