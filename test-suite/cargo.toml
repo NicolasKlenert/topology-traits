@@ -7,6 +7,9 @@ publish = false
 
 [dependencies]
 topology-traits = { path = "../topology-traits" }
+# necessary dependencies for topology-traits-derive:
+num-traits = "0.2"
 
 [dev-dependencies]
 topology-traits-derive = { path = "../topology-traits-derive"}
+derive_more = { version = "0.99", features = ["add", "mul"]}
